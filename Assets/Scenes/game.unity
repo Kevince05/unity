@@ -130,9 +130,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2578111477671022969, guid: ea3499d5f03677b42943bd289eabba16, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3419065494494721206, guid: ea3499d5f03677b42943bd289eabba16, type: 3}
       propertyPath: speed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808725050986693534, guid: ea3499d5f03677b42943bd289eabba16, type: 3}
+      propertyPath: m_Intensity
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6681198891911029256, guid: ea3499d5f03677b42943bd289eabba16, type: 3}
       propertyPath: m_Name
@@ -181,6 +189,10 @@ PrefabInstance:
     - target: {fileID: 6785166931590543953, guid: ea3499d5f03677b42943bd289eabba16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349806070251867642, guid: ea3499d5f03677b42943bd289eabba16, type: 3}
+      propertyPath: speed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea3499d5f03677b42943bd289eabba16, type: 3}
@@ -241,9 +253,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e0886c674ebe542ba759d9c60202e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  rotation_speed: 0.5
-  min_speed: 0.35
+  speed: 1
+  rotation_speed: 0.4
+  min_speed: 0.2
   Plane: {fileID: 1485962279}
 --- !u!54 &1744582119
 Rigidbody:
@@ -278,15 +290,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2964991367327833701, guid: 7e8bb3fe362f46d468db643a94b8f062, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2964991367327833701, guid: 7e8bb3fe362f46d468db643a94b8f062, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2964991367327833701, guid: 7e8bb3fe362f46d468db643a94b8f062, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.25
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2964991367327833701, guid: 7e8bb3fe362f46d468db643a94b8f062, type: 3}
       propertyPath: m_LocalPosition.x
@@ -330,6 +342,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2964991367327833701, guid: 7e8bb3fe362f46d468db643a94b8f062, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8247708930201248774, guid: 7e8bb3fe362f46d468db643a94b8f062, type: 3}
+      propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8247708930201248774, guid: 7e8bb3fe362f46d468db643a94b8f062, type: 3}
@@ -391,7 +407,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 0.6
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
