@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6647839159584075963, guid: ea3499d5f03677b42943bd289eabba16, type: 3}
       propertyPath: speed
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6681198891911029256, guid: ea3499d5f03677b42943bd289eabba16, type: 3}
       propertyPath: m_Name
@@ -307,6 +307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 2019240894}
+  bump_x: 0.1
+  bump_y: 0.1
 --- !u!1001 &1893115517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,7 +338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2964991367327833701, guid: 7e8bb3fe362f46d468db643a94b8f062, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.008994317
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2964991367327833701, guid: 7e8bb3fe362f46d468db643a94b8f062, type: 3}
       propertyPath: m_LocalPosition.y
