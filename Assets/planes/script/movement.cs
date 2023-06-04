@@ -11,9 +11,11 @@ public class movement : MonoBehaviour
     [SerializeField] public GameObject Plane;
 
     private Rigidbody Rigidbody;
+    private Animation Animation;
     void Start()
     {
         Rigidbody = GetComponent<Rigidbody>();
+        Animation = Plane.GetComponent<Animation>();
     }
 
     // Update is called once per frame
