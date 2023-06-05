@@ -16,6 +16,7 @@ public class movement : MonoBehaviour
     {
         Rigidbody = GetComponent<Rigidbody2D>();
         Animation = Plane.GetComponent<Animation>();
+        transform.position = new Vector2(Random.Range(-18,18), Random.Range(-8, 8));
     }
 
     // Update is called once per frame
