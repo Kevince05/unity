@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,57 +8,27 @@ using UnityEngine.SceneManagement;
 
 public class Posizione : MonoBehaviour
 {
-    [Space(10)]
-    [Header("Toggle for the gui on off")]
-    public bool GuiOn;
-    [Space(10)]
-    [Header("The text to Display on Trigger")]
-    [Tooltip("To edit the look of the text Go to Assets > Create > GUIskin. Add the new Guiskin to the Custom Skin proptery. If you select the GUIskin in your project tab you can now adjust the Label section to change this text")]
-    public string Text = "Turn Back";
+    [SerializeField] public TextMeshProUGUI text;
 
-    [Tooltip("This is the window Box's size. It will be mid screen. Add or reduce the X and Y to move the box in Pixels. ")]
-    public Rect BoxSize = new Rect(0, 0, 200, 100);
-
-
-    [Space(10)]
-    [Tooltip("To edit the look of the text Go to Assets > Create > GUIskin. Add the new Guiskin to the Custom Skin proptery. If you select the GUIskin in your project tab you can now adjust the font, colour, size etc of the text")]
-    public GUISkin customSkin;
-
-
-
-    
-    void OnTriggerEnter()
+    private Dictionary<string, string> lookup_table;
+    private void Start()
     {
-        GuiOn = true;
+        lookup_table = new Dictionary<string, string>() {
+            {"sud_america", "Sud America" },
+            {"nord_america", "Nord America" },
+            {"africa", "Africa" },
+            {"europa", "Europa" },
+            {"asia", "Asia" },
+            {"oceania", "Oceania" },
+            {"oceano_atlantico", "Oceano Atlantico" },
+            {"oceano_pacifico", "Oceano Pacifico" },
+            {"oceano_indiano", "Oceano Indiano" },
+            {"oceano_pacifico2", "Oceano Pacifico" }
+        };
     }
 
-
-    void OnTriggerExit()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        GuiOn = false;
-    }
-
-    void OnGUI()
-    {
-
-        if (customSkin != null)
-        {
-            GUI.skin = customSkin;
-        }
-
-        if (GuiOn == true)
-        {
-            
-            GUI.BeginGroup(new Rect((Screen.width - BoxSize.width) / 2, (Screen.height - BoxSize.height) / 2, BoxSize.width, BoxSize.height));
-            
-
-            GUI.Label(BoxSize, Text);
-
-            
-            GUI.EndGroup();
-
-        }
-
-
+        text.text = lookup_table[other.gameObject.name];
     }
 }

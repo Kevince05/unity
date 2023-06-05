@@ -10,11 +10,11 @@ public class movement : MonoBehaviour
     [SerializeField] public float min_speed;
     [SerializeField] public GameObject Plane;
 
-    private Rigidbody Rigidbody;
+    private Rigidbody2D Rigidbody;
     private Animation Animation;
     void Start()
     {
-        Rigidbody = GetComponent<Rigidbody>();
+        Rigidbody = GetComponent<Rigidbody2D>();
         Animation = Plane.GetComponent<Animation>();
     }
 
